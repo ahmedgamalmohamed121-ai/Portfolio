@@ -339,41 +339,32 @@ img {
 }
 
 .hero-name {
-    font-size: 4.5rem;
+    font-size: clamp(3rem, 8vw, 5rem);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(to right, #fff, var(--accent-color));
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #fff 0%, var(--accent-color) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.2));
+    filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.3));
 }
 
-/* Light Mode Hero Name */
-body.light-mode .hero-name {
-    background: linear-gradient(135deg, #1e293b, #0284c7, #0ea5e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-/* Code Brackets Styling */
-.hero-name .bracket {
+.hero-name::before {
+    content: '</ ';
     color: var(--accent-color);
-    font-weight: 900;
-    font-size: 1.3em;
-    display: inline-block;
-    text-shadow: none;
+    font-family: monospace;
+    opacity: 0.5;
+    font-size: 0.8em;
 }
 
-.hero-name .bracket:first-child {
-    margin-right: 0.5rem;
-}
-
-.hero-name .bracket:last-child {
-    margin-left: 0.5rem;
+.hero-name::after {
+    content: ' >';
+    color: var(--accent-color);
+    font-family: monospace;
+    opacity: 0.5;
+    font-size: 0.8em;
 }
 
 
