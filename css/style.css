@@ -319,7 +319,7 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 140px;
+    padding-top: 100px;
     position: relative;
     z-index: 1;
 }
@@ -352,11 +352,11 @@ img {
 
 /* Light Mode Hero Name */
 body.light-mode .hero-name {
-    background: linear-gradient(135deg, #1e293b, #0284c7, #0ea5e9);
+    background: #1e293b;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    filter: none;
 }
 
 
